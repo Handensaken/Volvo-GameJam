@@ -12,6 +12,8 @@ public class Moving : MonoBehaviour
     public Rigidbody2D rB;
 
     [SerializeField]
+    private SceneBehaviour sceneManager;
+    [SerializeField]
     private float JumpForce;
 
     // Start is called before the first frame update
@@ -60,4 +62,16 @@ public class Moving : MonoBehaviour
         Debug.DrawRay(groundObject.position, Vector2.down * 0.1f, raycolor);
         return hit.collider != null;
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Hazard"))
+        {
+            Debug.Log("huhrensohn");
+            sceneManager.LoadSceneDelayed("Max", 3);
+            Destroy(gameObject);
+        }
+    }
+
+   
 }
