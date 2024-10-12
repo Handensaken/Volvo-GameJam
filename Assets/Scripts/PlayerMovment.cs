@@ -17,10 +17,9 @@ public class PlayerMovment : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(isgrounded());
         move = Input.GetAxisRaw("Horizontal");
 
-        rig.velocity = new Vector2(move * speed, rig.velocity.y);
+        rig.AddForce(transform.right * move * speed * Time.deltaTime);
 
         if (isgrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rig.velocity.y! < 0.1)
         {
