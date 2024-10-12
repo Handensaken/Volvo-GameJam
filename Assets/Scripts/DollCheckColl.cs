@@ -20,7 +20,10 @@ public class DollCheckColl : MonoBehaviour
         {
             Debug.Log("huhrensohn");
             sceneManager.LoadSceneDelayed("Max", 3);
-            Destroy(gameObject.transform.parent.parent.gameObject);
+            if (gameObject.transform.parent != null)
+            {
+                Destroy(gameObject.transform.parent.parent.gameObject);
+            }else Destroy(this.gameObject);
         }
     }
 }

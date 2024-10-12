@@ -38,7 +38,7 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-            anim.Play("Walk");
+          //  anim.Play("Walk");
 
         //    anim.SetBool("fucker", true);
        /* if (movementInput.x > 0)
