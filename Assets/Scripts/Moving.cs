@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,7 +18,14 @@ public class Moving : MonoBehaviour
     private float JumpForce;
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        Collider2D[] colliders = transform.GetComponentsInChildren<Collider2D>();
+        for (int i = 0; i < colliders.Length; i++){
+            for (int j = 0; j < colliders.Length; j++){
+                Physics2D.IgnoreCollision(colliders[i], colliders[j]);
+            }
+        }
+     }
 
     // Update is called once per frame
     void Update()
@@ -27,17 +35,14 @@ public class Moving : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
-        Debug.Log("mov");
         movementInput = ctx.ReadValue<Vector2>();
     }
 
     public void OnJump()
     {
-        Debug.Log(isgrounded());
         if (isgrounded())
         {
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            Debug.Log("ran");
         }
     }
 
@@ -65,6 +70,7 @@ public class Moving : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log(col.gameObject.name);
         if (col.gameObject.CompareTag("Hazard"))
         {
             Debug.Log("huhrensohn");
