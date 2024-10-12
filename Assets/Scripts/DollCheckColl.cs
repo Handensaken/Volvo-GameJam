@@ -19,7 +19,7 @@ public class DollCheckColl : MonoBehaviour
         if (col.gameObject.CompareTag("Hazard"))
         {
             Debug.Log("huhrensohn");
-            sceneManager.LoadSceneDelayed("Max", 3);
+            sceneManager.ReloadSceneDelayed(3);
             if (gameObject.transform.parent != null)
             {
                 Destroy(gameObject.transform.parent.parent.gameObject);
