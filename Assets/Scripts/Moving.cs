@@ -27,7 +27,8 @@ public class Moving : MonoBehaviour
 
     public void OnJump()
     {
-        if (!Keyboard.current.spaceKey.wasPressedThisFrame && isgrounded())
+        Debug.Log(isgrounded());
+        if (isgrounded())
         {
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             Debug.Log("ran");

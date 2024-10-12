@@ -1,5 +1,5 @@
 {
-    "name": "Controls",
+    "name": "P1InputSys",
     "maps": [
         {
             "name": "Gameplay",
@@ -83,7 +83,7 @@
                 {
                     "name": "",
                     "id": "3f9db9dd-f640-4775-8a57-a59a0b516059",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
