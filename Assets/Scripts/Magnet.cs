@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Magnet : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Magnet : MonoBehaviour
     public float pullForce = 5f;
     public LayerMask layerMask;
     public Charge charge;
+    public bool IsActive = true;
 
     private Rigidbody2D rb;
     private void Start()
@@ -38,6 +40,13 @@ public class Magnet : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    public void OnChargeChange(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            IsActive = !IsActive;
         }
     }
     private void Pull(GameObject player)

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 6166222585709807407}
   - component: {fileID: 2849753996363866303}
   - component: {fileID: 8737926455004133864}
-  m_Layer: 0
+  - component: {fileID: 5267902413312305373}
+  m_Layer: 7
   m_Name: P2_TMP
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,10 +204,10 @@ MonoBehaviour:
     m_ActionName: Gameplay/Movement[/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8737926455004133864}
-        m_TargetAssemblyTypeName: Moving, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 1
+      - m_Target: {fileID: 5267902413312305373}
+        m_TargetAssemblyTypeName: Magnet, Assembly-CSharp
+        m_MethodName: OnChargeChange
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -217,6 +218,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1fa8b763-d17e-481a-a7db-456d4f034a62
     m_ActionName: Gameplay/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5267902413312305373}
+        m_TargetAssemblyTypeName: Magnet, Assembly-CSharp
+        m_MethodName: OnChargeChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3383077c-b455-4b29-a728-da97d2b8937c
+    m_ActionName: Gameplay/Interact[/Keyboard/0]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -241,6 +258,26 @@ MonoBehaviour:
   speed: 5
   rB: {fileID: 6166222585709807407}
   JumpForce: 10
+--- !u!114 &5267902413312305373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075851430299242241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c59e2d7a7d21b4598d9aed2c451902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  pushForce: 5
+  pullForce: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  charge: 2
+  IsActive: 1
 --- !u!1 &9019047411161813399
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133588226097835298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 8634572911503609245}
   - component: {fileID: 1887540182303604729}
   - component: {fileID: 7329395257337521415}
-  m_Layer: 0
+  - component: {fileID: 1524483338081844244}
+  m_Layer: 7
   m_Name: P1_TMP
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,6 +146,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0b0ee786-4e8e-453c-9f0a-2330713537a1
     m_ActionName: Gameplay/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1524483338081844244}
+        m_TargetAssemblyTypeName: Magnet, Assembly-CSharp
+        m_MethodName: OnChargeChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1519e498-7107-40e1-b102-cde1f236e20e
+    m_ActionName: Gameplay/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -241,6 +258,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1524483338081844244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137233151616628394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c59e2d7a7d21b4598d9aed2c451902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  pushForce: 5
+  pullForce: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  charge: 1
+  IsActive: 1
 --- !u!1 &8851686927849048262
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3701211061131520314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
