@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,11 +32,11 @@ public class Magnet : MonoBehaviour
                     {
                         if (charge == collider.gameObject.GetComponent<Magnet>().charge)
                         {
-                            Pull(collider.gameObject);
+                            Push(collider.gameObject);
                         }
                         else
                         {
-                            Push(collider.gameObject);
+                            Pull(collider.gameObject);
                         }
                     }
                 }
@@ -51,16 +52,19 @@ public class Magnet : MonoBehaviour
     }
     private void Pull(GameObject player)
     {
-        rb.AddForce((transform.position - player.transform.position).normalized * pullForce * 0.1f, ForceMode2D.Impulse);
+        rb.AddForce(-(transform.position - player.transform.position).normalized * pullForce * 0.1f, ForceMode2D.Impulse);
     }
     private void Push(GameObject player)
     {
-        rb.AddForce(-(transform.position - player.transform.position).normalized * pullForce * 0.1f, ForceMode2D.Impulse);
+        float temp = Vector2.Distance(player.transform.position, transform.position);
+        temp = temp / range;
+        Debug.Log(temp);
+        rb.AddForce((transform.position - player.transform.position).normalized * pushForce * 0.1f * temp, ForceMode2D.Impulse);
     }
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.DrawWireSphere(transform.position, range/2);
     }
 }
 public enum Charge
