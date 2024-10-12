@@ -324,20 +324,6 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "2adf9f67cca445b791c3a116448fb0a6"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "6a1432a786d44e29a8c6f99aa802294e"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
                     "m_Id": "9ce3eda12baa4383888d6fc94575ab27"
                 },
                 "m_SlotId": 1
@@ -621,6 +607,20 @@
                     "m_Id": "ecc357a209df41709c262820e63baa03"
                 },
                 "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "ecc357a209df41709c262820e63baa03"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "2adf9f67cca445b791c3a116448fb0a6"
+                },
+                "m_SlotId": 0
             }
         },
         {
@@ -1066,7 +1066,7 @@
     },
     "m_Name": "Split",
     "m_DrawState": {
-        "m_Expanded": true,
+        "m_Expanded": false,
         "m_Position": {
             "serializedVersion": "2",
             "x": 1389.0,
