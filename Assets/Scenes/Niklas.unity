@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375378386701107438bda876c9125960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
+  speed: 8
   jumpForce: 10
-  airMultipplyer: 0.5
+  airMultipplyer: 0.7
   groundObject: {fileID: 2001049646}
   layerMask:
     serializedVersion: 2
@@ -471,7 +471,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
-  charge: 2
+  charge: 1
 --- !u!50 &591973672
 Rigidbody2D:
   serializedVersion: 4
