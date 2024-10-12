@@ -27,6 +27,8 @@ public class PlayerMovment : MonoBehaviour
             Jump();
         }
     }
+    //Varför är isgrounded med ett litet i... för jag orkar inte ändra nu
+    //Men jag orkar skriva en kommentar om att det 
     private bool isgrounded()
     {
         RaycastHit2D hit = Physics2D.CircleCast(groundObject.position, 0.45f, Vector2.down, 0.1f, layerMask);
