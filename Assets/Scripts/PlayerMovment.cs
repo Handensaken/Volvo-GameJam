@@ -10,6 +10,9 @@ public class PlayerMovment : MonoBehaviour
     public Transform groundObject;
     public LayerMask layerMask;
     private Rigidbody2D rig;
+    public Animator animator;
+
+
 
     private float move;
     void Start()
@@ -24,13 +27,25 @@ public class PlayerMovment : MonoBehaviour
         transform.position +=  new Vector3(move * speed * Time.deltaTime * (isgrounded() ? 1 : airMultipplyer), 0, 0);
         //kanske translate
 
+        animator.SetFloat("Speed", Mathf.Abs(move));
+
 
         if (isgrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rig.velocity.y! < 0.1)
         {
             Jump();
+            animator.SetBool("IsJumping", true);
         }
+
+        if (isgrounded() && rig.velocity.y <= 0 ) OnLanding();
+
+
     }
-    //Varför är isgrounded med ett litet i... för jag orkar inte ändra nu
+
+    public void OnLanding ()
+    {
+      animator.SetBool("IsJumping", false);
+    }
+    //Varfï¿½r ï¿½r isgrounded med ett litet i... fï¿½r jag orkar inte ï¿½ndra nu
     //Men jag orkar skriva en kommentar om att det 
     private bool isgrounded()
     {
