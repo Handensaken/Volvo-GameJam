@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   jumpForce: 10
+  airMultipplyer: 0.5
   groundObject: {fileID: 2001049646}
   layerMask:
     serializedVersion: 2
@@ -592,7 +593,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1606637222}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 241a9b1081cdfce4e9cac4a5a26f8f6e, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

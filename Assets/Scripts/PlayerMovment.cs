@@ -6,6 +6,7 @@ public class PlayerMovment : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    public float airMultipplyer = 0.5f;
     public Transform groundObject;
     public LayerMask layerMask;
     private Rigidbody2D rig;
@@ -19,7 +20,14 @@ public class PlayerMovment : MonoBehaviour
     {
         move = Input.GetAxisRaw("Horizontal");
 
-        rig.AddForce(transform.right * move * speed * Time.deltaTime);
+        if (isgrounded())
+        {
+            rig.AddForce(transform.right * move * speed * Time.deltaTime, ForceMode2D.Force);
+        }
+        else
+        {
+            rig.AddForce(transform.right * move * speed * Time.deltaTime * airMultipplyer, ForceMode2D.Force);
+        }
 
         if (isgrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rig.velocity.y! < 0.1)
         {
