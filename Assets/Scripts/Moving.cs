@@ -23,7 +23,11 @@ public class Moving : MonoBehaviour
         transform.Translate(new Vector2(movementInput.x, movementInput.y) * speed * Time.deltaTime);
     }
 
-    public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    public void OnMove(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("mov");
+        movementInput = ctx.ReadValue<Vector2>();
+    }
 
     public void OnJump()
     {

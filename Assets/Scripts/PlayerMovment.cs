@@ -22,6 +22,8 @@ public class PlayerMovment : MonoBehaviour
 
         //rig.AddForce(transform.right * move * speed * Time.deltaTime, ForceMode2D.Force);
         transform.position +=  new Vector3(move * speed * Time.deltaTime * (isgrounded() ? 1 : airMultipplyer), 0, 0);
+        //kanske translate
+
 
         if (isgrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rig.velocity.y! < 0.1)
         {
