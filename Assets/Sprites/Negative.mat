@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline 1
+  m_Name: Negative
   m_Shader: {fileID: -6465566751694194690, guid: 72bf9fc276da82b489ca01dd76d54f15, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -67,11 +67,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Thickness: 1.45
+    - _Thickness: 0.92
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 1, g: 0.018271599, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 1.0547824, b: 9.734288, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Thickness: {r: -0.03, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
