@@ -27,7 +27,7 @@ public class Magnet : MonoBehaviour
             {
                 if (collider.gameObject != this.gameObject)
                 {
-                    if (charge != Charge.Non)
+                    if (charge != Charge.Non && IsActive && collider.gameObject.GetComponent<Magnet>().IsActive)
                     {
                         if (charge == collider.gameObject.GetComponent<Magnet>().charge)
                         {

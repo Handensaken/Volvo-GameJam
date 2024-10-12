@@ -80,18 +80,7 @@
                 },
                 {
                     "name": "",
-                    "id": "8441b464-34ce-4dd0-a4e2-c833d9c4ea95",
-                    "path": "<Keyboard>/0",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "db1b6ed7-e933-4540-ab44-17fcbb83e575",
+                    "id": "3ff1ba41-0620-466e-b5ca-70b01fa2e2d2",
                     "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",

@@ -204,9 +204,9 @@ MonoBehaviour:
     m_ActionName: Gameplay/Movement[/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5267902413312305373}
-        m_TargetAssemblyTypeName: Magnet, Assembly-CSharp
-        m_MethodName: OnChargeChange
+      - m_Target: {fileID: 8737926455004133864}
+        m_TargetAssemblyTypeName: Moving, Assembly-CSharp
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
