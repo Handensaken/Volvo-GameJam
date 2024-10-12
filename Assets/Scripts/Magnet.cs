@@ -54,7 +54,6 @@ public class Magnet : MonoBehaviour
     {
         float temp = Vector2.Distance(player.transform.position, transform.position);
         temp = temp / range;
-        Debug.Log((transform.position - player.transform.position).normalized * pullForce * 0.1f / temp);
         rb.AddForce(-(transform.position - player.transform.position).normalized * pullForce * 0.1f / temp, ForceMode2D.Impulse);
     }
     private void Push(GameObject player)
