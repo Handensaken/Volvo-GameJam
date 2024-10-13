@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Positive_green
+  m_Name: Negative_Purple 1
   m_Shader: {fileID: -6465566751694194690, guid: 72bf9fc276da82b489ca01dd76d54f15, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 41d43bd44799be34aab8127654df60b9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 708fe1cdde8f3fb4f993f798a6440271, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -67,11 +67,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Thickness: 1.1
+    - _Thickness: 0.9
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 5.992157, g: 0.1254902, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0.7993755, b: 7.37721, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Thickness: {r: -0.03, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
