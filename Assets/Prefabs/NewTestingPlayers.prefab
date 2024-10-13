@@ -493,7 +493,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   charge: 1
-  IsActive: 1
+  IsActive: 0
 --- !u!114 &3864398976567857883
 MonoBehaviour:
   m_ObjectHideFlags: 0
