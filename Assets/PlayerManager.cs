@@ -18,9 +18,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (var player in Players){
-                player.GetComponent<Magnet>().range = MagnetSize;
-            }
+        foreach (var player in Players)
+        {
+            player.GetComponent<Magnet>().range = MagnetSize;
+        }
         if (Players.Count != 0)
         {
             if (p1Charge == Charge.Positive)
@@ -43,15 +44,12 @@ public class PlayerManager : MonoBehaviour
             {
                 Players[1].GetComponent<AssignSelfToManager>().purpPos.SetActive(true);
                 Players[1].GetComponent<AssignSelfToManager>().purpNeg.SetActive(false);
-
             }
-            
         }
         else
         {
             if (wasGreater)
             {
-
                 FindObjectOfType<SceneBehaviour>().ReloadSceneDelayed(3);
             }
         }
