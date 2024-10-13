@@ -17,8 +17,7 @@ public class Moving : MonoBehaviour
     [SerializeField]
     private float JumpForce;
 
-    [SerializeField]
-    private Animator anim;
+    public Animator anim;
 
     private bool walkAnimPlaying;
 

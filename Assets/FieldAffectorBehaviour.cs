@@ -20,8 +20,11 @@ public class FieldAffectorBehaviour : MonoBehaviour
     {
         if (MAGA.IsActive)
         {
+            particleSystem.gameObject.SetActive(true);
             whoreson.SetActive(true);
-            whoreson.transform.localScale = new Vector3(MAGA.range, MAGA.range, 1) * 0.37f;
+            var test = particleSystem.shape;
+            test.radius = MAGA.range/2 -0.1f;
+            whoreson.transform.localScale = new Vector3(MAGA.range, MAGA.range, 1)*0.11f;
             if (MAGA.charge == Charge.Negative)
             {
                 particleSystem.startColor = Color.blue;
@@ -35,6 +38,7 @@ public class FieldAffectorBehaviour : MonoBehaviour
         }
         else
         {
+            particleSystem.gameObject.SetActive(false);
             whoreson.SetActive(false);
         }
     }
