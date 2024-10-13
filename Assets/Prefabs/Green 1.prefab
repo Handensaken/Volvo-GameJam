@@ -204,7 +204,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.2, y: -0.57, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 155283744966108423}
   - {fileID: 2397413222258977346}
@@ -324,6 +324,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1519e498-7107-40e1-b102-cde1f236e20e
     m_ActionName: Gameplay/Interact[/Keyboard/e,/XInputControllerWindows2/buttonWest,/XInputControllerWindows1/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 868e637f-74a6-462c-9041-9a513d258d70
+    m_ActionName: Gameplay/Start/Restart
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -355,7 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whoreson: {fileID: 4792506849479999946}
-  particleSystem: {fileID: 5993224450168371392}
+  particleSystemPos: {fileID: 0}
+  particleSystemNeg: {fileID: 0}
 --- !u!50 &2001477048764090613
 Rigidbody2D:
   serializedVersion: 4
@@ -1020,7 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FootstepReference: {fileID: 8300000, guid: 2fe45e47995d02542a2a1260432e55d5, type: 3}
   JumpReference: {fileID: 8300000, guid: fc2320a1fece8a440bbcdc5a23bd3488, type: 3}
-  AudioSource: {fileID: 0}
+  AudioSource: {fileID: 86432042364925002}
 --- !u!82 &86432042364925002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1033,7 +1038,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.296
+  m_Volume: 0.28
   m_Pitch: 1
   Loop: 0
   Mute: 0
