@@ -686,6 +686,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1641100887437431299, guid: 0f8206c6f93ea324abfe153109cb54be, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641100887437431299, guid: 0f8206c6f93ea324abfe153109cb54be, type: 3}
+      propertyPath: m_SortingOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641100887437431299, guid: 0f8206c6f93ea324abfe153109cb54be, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 703363701
+      objectReference: {fileID: 0}
     - target: {fileID: 3727761002300322154, guid: 0f8206c6f93ea324abfe153109cb54be, type: 3}
       propertyPath: door
       value: 
