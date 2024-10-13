@@ -42,7 +42,6 @@ public class SceneBehaviour : MonoBehaviour
         }
         ReloadScene();
     }
-
     private void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject.CompareTag("Player"))
@@ -54,7 +53,11 @@ public class SceneBehaviour : MonoBehaviour
             SceneManager.LoadScene(NextScene);
         }
     }
-   /* private void OnTriggerExit2D(Collider2D ){
-
-    }*/
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            whore--;
+        }
+    }
 }
