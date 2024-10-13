@@ -45,7 +45,7 @@ public class Magnet : MonoBehaviour
     }
     public void OnChargeChange(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.started)
         {
             IsActive = !IsActive;
         }
