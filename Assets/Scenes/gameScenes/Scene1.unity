@@ -1162,6 +1162,10 @@ PrefabInstance:
       propertyPath: NextScene
       value: Scene2
       objectReference: {fileID: 0}
+    - target: {fileID: 8024347897169705791, guid: 3271ef954f9129a4c850ded550746ba5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.15686275
+      objectReference: {fileID: 0}
     - target: {fileID: 9129937511214210286, guid: 3271ef954f9129a4c850ded550746ba5, type: 3}
       propertyPath: m_Name
       value: SceneManager
