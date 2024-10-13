@@ -63,6 +63,7 @@ public class PlayerManager : MonoBehaviour
                 Players[0].transform.position = s1.transform.position;
                 Players[0].GetComponent<Magnet>().charge = p1Charge;
                 //move to pos 1
+                s1.GetComponent<SpriteRenderer>().sprite = null;
             }
             else
             {
