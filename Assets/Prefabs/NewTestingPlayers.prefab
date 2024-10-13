@@ -473,7 +473,7 @@ MonoBehaviour:
     m_Bits: 64
   speed: 3
   rB: {fileID: 4220699431806932492}
-  JumpForce: 3
+  JumpForce: 4.5
   anim: {fileID: 6042447346088903041}
 --- !u!114 &1425677602690244677
 MonoBehaviour:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
-  pushForce: 5
+  pushForce: 6
   pullForce: 3.5
   layerMask:
     serializedVersion: 2

@@ -10,12 +10,17 @@ public class PlayerManager : MonoBehaviour
     public Charge p1Charge;
     public Charge p2Charge;
 
+    public float MagnetSize;
+
     // Start is called before the first frame update
     void Start() { }
 
     // Update is called once per frame
     void Update()
     {
+        foreach (var player in Players){
+                player.GetComponent<Magnet>().range = MagnetSize;
+            }
         if (Players.Count != 0)
         {
             if (p1Charge == Charge.Positive)
@@ -38,7 +43,9 @@ public class PlayerManager : MonoBehaviour
             {
                 Players[1].GetComponent<AssignSelfToManager>().purpPos.SetActive(true);
                 Players[1].GetComponent<AssignSelfToManager>().purpNeg.SetActive(false);
+
             }
+            
         }
         else
         {

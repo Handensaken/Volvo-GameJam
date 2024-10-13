@@ -650,6 +650,7 @@ MonoBehaviour:
   s2: {fileID: 1592544194448175295}
   p1Charge: 0
   p2Charge: 0
+  MagnetSize: 5
 --- !u!1 &8123117020666155996
 GameObject:
   m_ObjectHideFlags: 0

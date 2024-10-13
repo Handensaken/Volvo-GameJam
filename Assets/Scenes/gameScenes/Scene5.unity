@@ -276,11 +276,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888416925491800957, guid: 5d8578305700d334b83cd25472f3795b, type: 3}
       propertyPath: p1Charge
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8888416925491800957, guid: 5d8578305700d334b83cd25472f3795b, type: 3}
       propertyPath: p2Charge
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888416925491800957, guid: 5d8578305700d334b83cd25472f3795b, type: 3}
+      propertyPath: MagnetSize
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
