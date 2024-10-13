@@ -333,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5326230625479340047, guid: eb44ae7709bd7c94099124a208e8bf1b, type: 3}
       propertyPath: p1Charge
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5326230625479340047, guid: eb44ae7709bd7c94099124a208e8bf1b, type: 3}
       propertyPath: p2Charge
