@@ -12,6 +12,9 @@ public class SceneBehaviour : MonoBehaviour
     int whore = 0;
     public TextMeshProUGUI textMeshPro;
 
+    [Tooltip("If true, restarts on star. If false plays nextscene variable")]
+    public bool restartOnStart = true;
+
     public void Update()
     {
         if (textMeshPro != null)
@@ -19,7 +22,20 @@ public class SceneBehaviour : MonoBehaviour
             textMeshPro.text = $"{whore / 2}/2";
         }
     }
-
+    public void OnStart()
+    {
+        if (restartOnStart)
+        {
+            ReloadScene();
+        }
+        else
+        {
+            if (NextScene != null)
+            {
+                LoadScene(NextScene);
+            }
+        }
+    }
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
