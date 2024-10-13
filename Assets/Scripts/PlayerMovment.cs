@@ -12,12 +12,15 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D rig;
     public Animator animator;
 
+    AudioSource audiosource; 
+
 
 
     private float move;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        audiosource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -28,6 +31,19 @@ public class PlayerMovment : MonoBehaviour
         //kanske translate
 
         animator.SetFloat("Speed", Mathf.Abs(move));
+
+        if (move * speed * Time.deltaTime > 0)
+        {
+            Debug.Log("hehehe");
+            if (!audiosource.isPlaying)
+            {
+                audiosource.Play(); 
+            }
+        }
+        else
+        {
+            audiosource.Stop(); 
+        }
 
 
         if (isgrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && rig.velocity.y! < 0.1)

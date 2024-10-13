@@ -23,7 +23,7 @@ public class Moving : MonoBehaviour
     private bool walkAnimPlaying;
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() { Debug.Log("hihi"); }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -40,6 +40,7 @@ public class Moving : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
+        
         movementInput = ctx.ReadValue<Vector2>();
         walkAnimPlaying = true;
     }
