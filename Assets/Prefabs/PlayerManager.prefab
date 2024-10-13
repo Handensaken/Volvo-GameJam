@@ -50,7 +50,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 2
+  m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -69,7 +69,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 5137233151616628394, guid: 8c3b1a316930b8d48bf60b9591efce7a, type: 3}
+  m_PlayerPrefab: {fileID: 3008673099104689027, guid: a1a670be8c6cbb34785f384f6000321c, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -94,6 +94,8 @@ MonoBehaviour:
   Players: []
   s1: {fileID: 1462830847640232097}
   s2: {fileID: 8332592508257249024}
+  p1Charge: 0
+  p2Charge: 0
 --- !u!1 &1462830847640232097
 GameObject:
   m_ObjectHideFlags: 0

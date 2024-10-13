@@ -11,22 +11,31 @@ public class SceneBehaviour : MonoBehaviour
     private string NextScene;
     int whore = 0;
     public TextMeshProUGUI textMeshPro;
-    public void Update() { 
-        textMeshPro.text = $"{whore/2}/2";
+
+    public void Update()
+    {
+        if (textMeshPro != null)
+        {
+            textMeshPro.text = $"{whore / 2}/2";
+        }
     }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
         SceneManager.GetActiveScene();
     }
+
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
     public void ReloadSceneDelayed(float delayTimeInSeconds)
     {
         StartCoroutine(Cock(delayTimeInSeconds));
     }
+
     private IEnumerator Cock(float delay)
     {
         float counter = delay;
@@ -37,6 +46,12 @@ public class SceneBehaviour : MonoBehaviour
         }
         ReloadScene();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     private void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject.CompareTag("Player"))
@@ -48,6 +63,7 @@ public class SceneBehaviour : MonoBehaviour
             SceneManager.LoadScene(NextScene);
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
