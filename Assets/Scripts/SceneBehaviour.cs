@@ -49,7 +49,7 @@ public class SceneBehaviour : MonoBehaviour
         {
             whore++;
         }
-        if (whore >= 4)
+        if (whore >= 2)
         {
             SceneManager.LoadScene(NextScene);
         }
