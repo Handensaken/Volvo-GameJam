@@ -27,7 +27,7 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(new Vector2(movementInput.x, movementInput.y) * speed * Time.deltaTime);
+        transform.Translate(new Vector2(movementInput.x, 0) * speed * Time.deltaTime);
         if (anim != null)
         {
             anim.SetFloat("Speed", Mathf.Abs(movementInput.x));
