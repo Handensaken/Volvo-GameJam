@@ -26,7 +26,7 @@ public class SceneBehaviour : MonoBehaviour
     {
         if (restartOnStart)
         {
-            ReloadScene();
+            //ReloadScene();
         }
         else
         {
