@@ -21,6 +21,7 @@ public class Moving : MonoBehaviour
     public Animator anim;
 
     private bool walkAnimPlaying;
+    private bool canJump = true;
 
     // Start is called before the first frame update
     void Start() { Debug.Log("hihi"); }
@@ -51,19 +52,19 @@ public class Moving : MonoBehaviour
         movementInput = ctx.ReadValue<Vector2>();
         walkAnimPlaying = true;
     }
-
     public void OnJump()
     {
-        if (isgrounded())
+        if (isgrounded() && canJump)
         {
             if (anim != null)
             {
                 anim.SetBool("IsJumping", true);
             }
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+            canJump = false;
+            StartCoroutine(JumpDeley(0.2f));
         }
     }
-
     private bool isgrounded()
     {
         RaycastHit2D hit = Physics2D.CircleCast(
@@ -90,16 +91,14 @@ public class Moving : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundObject.transform.position, groundRange);
     }
-
-    /*  private void OnCollisionEnter2D(Collision2D col)
-      {
-          Debug.Log(col.gameObject.name);
-          if (col.gameObject.CompareTag("Hazard"))
-          {
-              Debug.Log("huhrensohn");
-              sceneManager.LoadSceneDelayed("Max", 3);
-              Destroy(gameObject);
-          }
-      }
-  */
+    private IEnumerator JumpDeley(float delay)
+    {
+        float counter = delay;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(0.1f);
+            counter--;
+        }
+        canJump = true;
+    }
 }

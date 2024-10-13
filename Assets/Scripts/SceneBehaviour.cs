@@ -80,7 +80,6 @@ public class SceneBehaviour : MonoBehaviour
             SceneManager.LoadScene(NextScene);
         }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
