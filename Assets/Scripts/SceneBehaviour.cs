@@ -49,7 +49,8 @@ public class SceneBehaviour : MonoBehaviour
 
     public void ReloadSceneDelayed(float delayTimeInSeconds)
     {
-        StartCoroutine(Cock(delayTimeInSeconds));
+        ReloadScene();
+        //StartCoroutine(Cock(delayTimeInSeconds));
     }
 
     private IEnumerator Cock(float delay)
