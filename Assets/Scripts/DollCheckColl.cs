@@ -31,4 +31,7 @@ public class DollCheckColl : MonoBehaviour
             }else Destroy(this.gameObject);
         }
     }
+    public void ManualRestart(){
+        sceneManager.ReloadScene();
+    }
 }
