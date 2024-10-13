@@ -9,9 +9,13 @@ public class AssignSelfToManager : MonoBehaviour
     Moving movement;
     public GameObject green;
     public GameObject purple;
+    public Charge charge;
     public Animator gr;
     public Animator pu;
-
+    public GameObject grePos;
+    public GameObject greNeg;
+    public GameObject purpNeg;
+    public GameObject purpPos;
     void Start()
     {
         movement = GetComponent<Moving>();

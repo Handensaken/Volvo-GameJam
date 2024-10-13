@@ -21,8 +21,10 @@ public class DollCheckColl : MonoBehaviour
 //        Debug.Log(col.gameObject.name);
         if (col.gameObject.CompareTag("Hazard"))
         {
+            GameObject.FindObjectOfType<PlayerManager>().Players.Remove(this.gameObject);
             Debug.Log("huhrensohn");
             sceneManager.ReloadSceneDelayed(3);
+
             if (gameObject.transform.parent != null)
             {
                 Destroy(gameObject.transform.parent.parent.gameObject);
