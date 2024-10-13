@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5137233151616628394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.43, y: -1.32, z: 0.012654288}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -257,8 +257,8 @@ MonoBehaviour:
     m_Bits: 64
   speed: 3
   rB: {fileID: 1887540182303604729}
-  sceneManager: {fileID: 0}
   JumpForce: 10
+  anim: {fileID: 0}
 --- !u!114 &1524483338081844244
 MonoBehaviour:
   m_ObjectHideFlags: 0

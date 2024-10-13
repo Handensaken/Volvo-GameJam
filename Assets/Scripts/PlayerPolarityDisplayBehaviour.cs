@@ -9,6 +9,7 @@ public class PlayerPolarityDisplayBehaviour : MonoBehaviour
     public Sprite pos;
     public Sprite neg;
     public Magnet mag;
+    public Sprite trans;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,6 @@ public class PlayerPolarityDisplayBehaviour : MonoBehaviour
     {
         if(mag.charge == Charge.Positive){
             img.sprite = pos;
-        }else if (mag.charge == Charge.Negative)img.sprite=neg;else img.sprite = null;
+        }else if (mag.charge == Charge.Negative)img.sprite=neg;else img.sprite = trans;
     }
 }

@@ -5,7 +5,10 @@ using UnityEngine;
 public class DollCheckColl : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        sceneManager = GameObject.FindFirstObjectByType<SceneBehaviour>();
+        Debug.Log(sceneManager.name );
+     }
 
     [SerializeField]
     private SceneBehaviour sceneManager;

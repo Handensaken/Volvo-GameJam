@@ -1774,6 +1774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green
       objectReference: {fileID: 0}
+    - target: {fileID: 2347933275852920180, guid: c3f50ddba6b45b244ac034aee7a0d316, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258414864755404474, guid: c3f50ddba6b45b244ac034aee7a0d316, type: 3}
       propertyPath: sceneManager
       value: 
@@ -1849,6 +1853,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075851430299242241, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 43509eca2cb87394b8248f001976196e, type: 3}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 98352f5d-102d-4ac0-ade9-d1b72f513e56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 0b0ee786-4e8e-453c-9f0a-2330713537a1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 1519e498-7107-40e1-b102-cde1f236e20e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Gameplay/Move[/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick,/XInputControllerWindows2/leftStick]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Gameplay/Jump[/XInputControllerWindows/buttonSouth,/XInputControllerWindows2/buttonSouth,/Keyboard/w]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Gameplay/Interact[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849753996363866303, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5267902413312305373, guid: 85fdbde9bb4158342b444d7ea31482a4, type: 3}
@@ -1935,7 +1979,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 2
+  m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
