@@ -23,45 +23,20 @@ public class Moving : MonoBehaviour
     private bool walkAnimPlaying;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        walkAnimPlaying = false;
-        Collider2D[] colliders = transform.GetComponentsInChildren<Collider2D>();
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            for (int j = 0; j < colliders.Length; j++)
-            {
-                Physics2D.IgnoreCollision(colliders[i], colliders[j]);
-            }
-        }
-    }
+    void Start() { }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-          //  anim.Play("Walk");
-
-        //    anim.SetBool("fucker", true);
-       /* if (movementInput.x > 0)
-        {
-            Debug.Log("cuck");
-            anim.Play("Walk");
-            //Walk forward
-        }
-        else if (movementInput.x < 0)
-        {
-            Debug.Log("buck");
-            anim.Play("WalkBack");
-            //walk backward
-        }
-        if (!walkAnimPlaying)
-        {
-            Debug.Log("ruck");
-            anim.Play("Idle");
-        }*/
-
         transform.Translate(new Vector2(movementInput.x, movementInput.y) * speed * Time.deltaTime);
-        
+        anim.SetFloat("Speed", Mathf.Abs(movementInput.x));
+        if (isgrounded() && rB.velocity.y <= 0)
+            OnLanding();
     }
+
+    void OnLanding() {
+        anim.SetBool("IsJumping", false);
+     }
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -73,6 +48,7 @@ public class Moving : MonoBehaviour
     {
         if (isgrounded())
         {
+            anim.SetBool("IsJumping", true);
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
     }

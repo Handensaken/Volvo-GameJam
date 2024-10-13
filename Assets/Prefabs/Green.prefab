@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3358387862184264433}
   - component: {fileID: 2243361001182522160}
   m_Layer: 0
-  m_Name: Purple_leg (1)
+  m_Name: Player2_R_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2767039854416407141}
   - component: {fileID: 7317219981251857260}
   m_Layer: 0
-  m_Name: Untitled-1
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,6 +170,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1546726009009651817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2515103630947092674}
+  m_Layer: 0
+  m_Name: GroundReg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2515103630947092674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546726009009651817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8361668661660637752}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866939742867864542
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,9 +298,13 @@ GameObject:
   - component: {fileID: 3633720856281157682}
   - component: {fileID: 4890151871139760135}
   - component: {fileID: 7368669354747578822}
-  m_Layer: 0
+  - component: {fileID: 3372913563664023860}
+  - component: {fileID: 1680043192085121914}
+  - component: {fileID: 5554928646053268992}
+  - component: {fileID: 8258414864755404474}
+  m_Layer: 7
   m_Name: Green
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,6 +327,7 @@ Transform:
   - {fileID: 3358387862184264433}
   - {fileID: 7468034372021884190}
   - {fileID: 3405449574179173601}
+  - {fileID: 2515103630947092674}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1122497943009312413
@@ -322,7 +358,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2347933275852920180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 375378386701107438bda876c9125960, type: 3}
   m_Name: 
@@ -397,6 +433,137 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011803865, y: -2.4198115}
   m_Size: {x: 2.4122415, y: 5.08417}
   m_Direction: 0
+--- !u!114 &3372913563664023860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347933275852920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e3edfb21fbd6479e8ddba949c26d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundObject: {fileID: 2515103630947092674}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  speed: 5
+  rB: {fileID: 4890151871139760135}
+  JumpForce: 5
+  anim: {fileID: 1122497943009312413}
+--- !u!114 &1680043192085121914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347933275852920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c59e2d7a7d21b4598d9aed2c451902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  pushForce: 5
+  pullForce: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  charge: 0
+  IsActive: 1
+--- !u!114 &5554928646053268992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347933275852920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 715365f7c95decc4e9210edb3de776a9, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3372913563664023860}
+        m_TargetAssemblyTypeName: Moving, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f849c790-0bc3-4ffb-8091-127358cc33f6
+    m_ActionName: Gameplay/Movement[/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3372913563664023860}
+        m_TargetAssemblyTypeName: Moving, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1fa8b763-d17e-481a-a7db-456d4f034a62
+    m_ActionName: Gameplay/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1680043192085121914}
+        m_TargetAssemblyTypeName: Magnet, Assembly-CSharp
+        m_MethodName: OnChargeChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3383077c-b455-4b29-a728-da97d2b8937c
+    m_ActionName: Gameplay/Interact[/Keyboard/numpad0]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &8258414864755404474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347933275852920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d713028ef1a2449958c4c06da44283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
 --- !u!1 &2466896794940817235
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +659,7 @@ GameObject:
   - component: {fileID: 7468034372021884190}
   - component: {fileID: 1769428857228334966}
   m_Layer: 0
-  m_Name: Purple_arm
+  m_Name: Player2_R_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +743,7 @@ GameObject:
   - component: {fileID: 3405449574179173601}
   - component: {fileID: 7769844549672839937}
   m_Layer: 0
-  m_Name: Purple_arm (1)
+  m_Name: Player2_L_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +827,7 @@ GameObject:
   - component: {fileID: 3542891193830895271}
   - component: {fileID: 117900833223042169}
   m_Layer: 0
-  m_Name: Purple_leg
+  m_Name: Player2_L_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

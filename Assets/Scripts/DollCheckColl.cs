@@ -15,7 +15,7 @@ public class DollCheckColl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(col.gameObject.name);
+//        Debug.Log(col.gameObject.name);
         if (col.gameObject.CompareTag("Hazard"))
         {
             Debug.Log("huhrensohn");
