@@ -29,6 +29,7 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(rB.velocity.y < 0.01f);
         transform.Translate(new Vector2(movementInput.x, 0) * speed * Time.deltaTime);
         if (anim != null)
         {
@@ -54,7 +55,7 @@ public class Moving : MonoBehaviour
     }
     public void OnJump()
     {
-        if (isgrounded() && canJump)
+        if (isgrounded() && canJump && Mathf.Abs(rB.velocity.y) < 0.01f)
         {
             if (anim != null)
             {
@@ -62,7 +63,7 @@ public class Moving : MonoBehaviour
             }
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             canJump = false;
-            StartCoroutine(JumpDeley(0.2f));
+            StartCoroutine(JumpDeley(0.3f));
         }
     }
     private bool isgrounded()
@@ -93,12 +94,8 @@ public class Moving : MonoBehaviour
     }
     private IEnumerator JumpDeley(float delay)
     {
-        float counter = delay;
-        while (counter > 0)
-        {
-            yield return new WaitForSeconds(0.1f);
-            counter--;
-        }
+
+        yield return new WaitForSeconds(delay);
         canJump = true;
     }
 }
