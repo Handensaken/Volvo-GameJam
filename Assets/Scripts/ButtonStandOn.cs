@@ -15,16 +15,19 @@ public class ButtonStandOn : MonoBehaviour
 
     void Update()
     {
+        GetComponent<Renderer>().material.color = Color.red;
+
         Collider2D colliders = Physics2D.OverlapCircle(transform.position, range, layerMask);
         if (colliders != null)
         {
             if (Vector3.Distance(door.position, doorOpen.position) > 0.01f)
             {
                 door.position = Vector3.MoveTowards(door.position, doorOpen.position, speed * Time.deltaTime);
+                GetComponent<Renderer>().material.color = Color.green; 
             }
             else
             {
-                door.position = doorOpen.position;
+                door.position = doorOpen.position; 
             }
         }
         else
@@ -32,6 +35,7 @@ public class ButtonStandOn : MonoBehaviour
             if (Vector3.Distance(door.position, doorClose.position) > 0.01f)
             {
                 door.position = Vector3.MoveTowards(door.position, doorClose.position, speed * Time.deltaTime);
+                GetComponent<Renderer>().material.color = Color.red; 
             }
             else
             {
