@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class Moving : MonoBehaviour
 {
     public Transform groundObject;
+    public float groundRange = 0.45f;
     public LayerMask layerMask;
     public float speed = 5f;
     private Vector2 movementInput;
@@ -67,7 +68,7 @@ public class Moving : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.CircleCast(
             groundObject.position,
-            0.45f,
+            groundRange,
             Vector2.down,
             0.1f,
             layerMask
@@ -83,6 +84,11 @@ public class Moving : MonoBehaviour
         }
         Debug.DrawRay(groundObject.position, Vector2.down * 0.1f, raycolor);
         return hit.collider != null;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundObject.transform.position, groundRange);
     }
 
     /*  private void OnCollisionEnter2D(Collision2D col)
