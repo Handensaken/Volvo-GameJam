@@ -32,6 +32,7 @@ public class DollCheckColl : MonoBehaviour
         }
     }
     public void ManualRestart(){
+        Debug.Log("restarting");
         sceneManager.ReloadScene();
     }
 }

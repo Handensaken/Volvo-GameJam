@@ -44,7 +44,6 @@ public class PlayerManager : MonoBehaviour
         {
             if (wasGreater)
             {
-                Debug.Log("fucker" + wasGreater);
 
                 FindObjectOfType<SceneBehaviour>().ReloadSceneDelayed(3);
             }
