@@ -489,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   pushForce: 6
-  pullForce: 3.5
+  pullForce: 3
   layerMask:
     serializedVersion: 2
     m_Bits: 128
