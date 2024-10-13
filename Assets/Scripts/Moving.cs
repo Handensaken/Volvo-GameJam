@@ -29,18 +29,25 @@ public class Moving : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(new Vector2(movementInput.x, movementInput.y) * speed * Time.deltaTime);
-        anim.SetFloat("Speed", Mathf.Abs(movementInput.x));
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", Mathf.Abs(movementInput.x));
+        }
         if (isgrounded() && rB.velocity.y <= 0)
             OnLanding();
     }
 
-    void OnLanding() {
-        anim.SetBool("IsJumping", false);
-     }
+    void OnLanding()
+    {
+        if (anim != null)
+        {
+            anim.SetBool("IsJumping", false);
+        }
+    }
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
-        
+
         movementInput = ctx.ReadValue<Vector2>();
         walkAnimPlaying = true;
     }
@@ -49,7 +56,10 @@ public class Moving : MonoBehaviour
     {
         if (isgrounded())
         {
-            anim.SetBool("IsJumping", true);
+            if (anim != null)
+            {
+                anim.SetBool("IsJumping", true);
+            }
             rB.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
     }
