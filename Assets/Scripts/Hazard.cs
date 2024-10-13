@@ -6,7 +6,7 @@ public class Hazard : MonoBehaviour
 {
     public SceneBehaviour sceneManager;
     [Range(0, 10)]
-    public int reloadDeley = 2;
+    public float reloadDeley = 2;
 
     private void OnCollisionEnter2D(Collision2D col)
        {

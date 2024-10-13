@@ -27,14 +27,14 @@ public class SceneBehaviour : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void ReloadSceneDelayed(int delayTimeInSeconds)
+    public void ReloadSceneDelayed(float delayTimeInSeconds)
     {
         StartCoroutine(Cock(delayTimeInSeconds));
     }
 
-    private IEnumerator Cock(int delay)
+    private IEnumerator Cock(float delay)
     {
-        int counter = delay;
+        float counter = delay;
         while (counter > 0)
         {
             yield return new WaitForSeconds(1);
