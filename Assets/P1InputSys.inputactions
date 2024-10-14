@@ -141,6 +141,17 @@
                     "action": "Start/Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee47e1db-253c-4e7c-b572-5707c8a49531",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start/Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
